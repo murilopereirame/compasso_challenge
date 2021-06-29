@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     borderRadius: 10,
     elevation: 5,
-    marginTop: 20
+    marginTop: 20,
+    height: 50
   },
   searchBar: {
     width: Dimensions.get('window').width * 0.85,
