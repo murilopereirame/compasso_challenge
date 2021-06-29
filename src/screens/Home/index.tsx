@@ -47,7 +47,7 @@ const Home = ({navigation}: Props) => {
 
     setLoading(true);
 
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${searchText}`).then((result) => {      
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${searchText.toLowerCase()}`).then((result) => {      
       let pokemon: Pokemon = {
         name: fixName(result.data.name),
         id: result.data.id,

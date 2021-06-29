@@ -87,7 +87,7 @@ const Details = (navigation: any) => {
           <View style={styles.typesContainer}>
             {
               pokemon.types.map((type, index) => {
-                return <TypeBadge key={index} type={type} color={typeColor(type)}/>
+                return <TypeBadge key={`tp-${index}`} type={type} color={typeColor(type)}/>
               })
             }
           </View>
@@ -96,8 +96,8 @@ const Details = (navigation: any) => {
             <View style={styles.movesList}>
               {
                 pokemon.moves.map((elem, index) => {                  
-                  return <View style={styles.moveTextContainer}>
-                    <Text key={index} style={styles.moveText}>{elem}</Text>
+                  return <View key={`mov-${index}`} style={styles.moveTextContainer}>
+                    <Text style={styles.moveText}>{elem}</Text>
                   </View>
                 })
               }              
